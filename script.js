@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let moves = 0;
 
    
-    fetch('data/levels.json')
+    fetch('level/levels.json')
         .then(response => response.json())
         .then(data => {
             levels = data;
