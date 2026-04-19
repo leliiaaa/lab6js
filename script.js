@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gridState = currentLevel.grid.map(row => [...row]);
         moves = 0;
         minMovesElement.textContent = currentLevel.minMoves;
-        document.getElementById('level-title').textContent = `Рівень: ${currentLevel.id}`;
+
         updateUI();
         winMessage.classList.add('hidden');
     }
