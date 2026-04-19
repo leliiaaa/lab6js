@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gridState = currentLevel.grid.map(row => [...row]);
         moves = 0;
         minMovesElement.textContent = currentLevel.minMoves;
+        document.getElementById('level-title').textContent = `Рівень: ${currentLevel.id}`;
         updateUI();
         winMessage.classList.add('hidden');
     }
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function handleCellClick(row, col) {
-        if (!winMessage.classList.contains('hidden')) return; // Гра завершена
+        if (!winMessage.classList.contains('hidden')) return; 
 
         moves++;
         toggleCell(row, col);       
